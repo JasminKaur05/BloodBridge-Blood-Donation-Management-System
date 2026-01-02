@@ -1,6 +1,10 @@
 **# 🩸 BloodBridge – Blood Donation Management System**
 
+
+
+
 BloodBridge is a web-based blood donation management system designed to connect blood donors and recipients efficiently. The system helps users request blood in emergencies and notifies nearby eligible donors in real time.
+
 
 
 
@@ -21,6 +25,9 @@ Donor Notification System
 Donor Response (Accept / Decline)
 
 Secure Authentication and Data Handling
+
+
+
 
 
 
@@ -59,6 +66,13 @@ Git & GitHub
 
 
 
+
+
+
+
+
+
+
 **⚙️ System Workflow**
 
 User registers and logs in to the system
@@ -76,6 +90,14 @@ Requester receives donor details upon acceptance
 
 
 
+
+
+
+
+
+
+
+
 **🗄️ Database Structure**
 
 users – Stores user login details
@@ -87,6 +109,12 @@ requests – Stores blood request details
 notifications – Handles donor notifications
 
 admin – Admin-related data
+
+
+
+
+
+
 
 
 
