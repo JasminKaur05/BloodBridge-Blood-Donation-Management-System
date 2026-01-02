@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BloodBridge - Connecting Donors and Receivers</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="https://z-cdn-media.chatglm.cn/files/4b1001a3-e1ee-4145-b54f-a95d560e950d_pasted_image_1759676418101.png?auth_key=1791212796-ab6ad212a18e43cb952d122c2f6bc90d-0-902394f1f55b379d8f204ac57729c0db" alt="BloodBridge Logo" class="logo-img">
+            <span class="logo-text">BloodBridge</span>
+        </div>
+        <div class="nav-links">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact</a>
+            <a href="/bloodbridge/donor_notifications.html" id="donor-notifications-link" style="display: none;">Donor Notifications</a>
+            <a href="/bloodbridge/register.html" id="register-link">Register</a>
+            <a href="/bloodbridge/login.html" id="login-link">Login</a>
+            <a href="#" id="logout-link" style="display: none;">Logout</a>
+        </div>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-logo">
+                <img src="https://z-cdn-media.chatglm.cn/files/4b1001a3-e1ee-4145-b54f-a95d560e950d_pasted_image_1759676418101.png?auth_key=1791212796-ab6ad212a18e43cb952d122c2f6bc90d-0-902394f1f55b379d8f204ac57729c0db" alt="BloodBridge Logo" class="hero-logo-img">
+            </div>
+            <h1>BloodBridge – Bridging Donors and Lives</h1>
+            <p>Connect with blood donors in your area and save lives</p>
+            <div class="hero-buttons">
+                <div class="card donate-card" id="donate-btn">
+                    <div class="card-icon">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h2>Donate Blood</h2>
+                    <p>Register as a blood donor and help save lives</p>
+                </div>
+                <div class="card request-card" id="request-btn">
+                    <div class="card-icon">
+                        <i class="fas fa-procedures"></i>
+                    </div>
+                    <h2>Request Blood</h2>
+                    <p>Find blood donors in your area quickly</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About BloodBridge</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>BloodBridge is a platform that connects blood donors with patients in need. Our mission is to make blood donation and request process simple, efficient, and life-saving.</p>
+                    <p>With our extensive database of donors across various blood types, we help patients find the right match quickly in their time of need.</p>
+                    <p>Join us in this noble cause and be a hero in someone's life story.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://via.placeholder.com/500x300?text=Blood+Donation" alt="Blood Donation">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>123 Health Street, Medical City, MC 12345</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <p>+1 (123) 456-7890</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>info@bloodbridge.org</p>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contact-form">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <textarea placeholder="Your Message" required></textarea>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="https://z-cdn-media.chatglm.cn/files/4b1001a3-e1ee-4145-b54f-a95d560e950d_pasted_image_1759676418101.png?auth_key=1791212796-ab6ad212a18e43cb952d122c2f6bc90d-0-902394f1f55b379d8f204ac57729c0db" alt="BloodBridge Logo" class="footer-logo-img">
+                    <span class="logo-text">BloodBridge</span>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 BloodBridge. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Donor Registration Modal -->
+    <div id="donor-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Donor Registration</h2>
+            <form id="donor-form">
+                <div class="form-group">
+                    <label for="dname">Full Name</label>
+                    <input type="text" id="dname" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="dage">Age</label>
+                    <input type="number" id="dage" name="age" min="18" max="65" required>
+                </div>
+                <div class="form-group">
+                    <label for="dgender">Gender</label>
+                    <select id="dgender" name="gender" required>
+                        <option value="">Select Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="dblood">Blood Group</label>
+                    <select id="dblood" name="blood_group" required>
+                        <option value="">Select Blood Group</option>
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="dphone">Phone Number</label>
+                    <input type="tel" id="dphone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="demail">Email</label>
+                    <input type="email" id="demail" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="daddress">Address</label>
+                    <textarea id="daddress" name="address" required></textarea>
+                </div>
+                <button type="submit" class="btn">Register as Donor</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Blood Request Modal -->
+    <div id="request-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Request Blood</h2>
+            <form id="request-form">
+                <div class="form-group">
+                    <label for="rname">Patient Name</label>
+                    <input type="text" id="rname" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="rblood">Blood Group Required</label>
+                    <select id="rblood" name="blood_group" required>
+                        <option value="">Select Blood Group</option>
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="raddress">Hospital/Address</label>
+                    <textarea id="raddress" name="address" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="rlocation">City/Area</label>
+                    <input type="text" id="rlocation" name="location" required placeholder="e.g., New York, Manhattan">
+                </div>
+                <div class="form-group">
+                    <label for="rphone">Contact Phone</label>
+                    <input type="tel" id="rphone" name="phone" required>
+                </div>
+                <button type="submit" class="btn">Find Donors</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Notification -->
+    <div id="notification" class="notification">
+        <span id="notification-message"></span>
+        <span class="close-notification">&times;</span>
+    </div>
+
+    <script>
+        // Check if user is logged in and update navigation
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check for user in localStorage
+            const user = localStorage.getItem('user');
+            if (user) {
+                // User is logged in
+                document.getElementById('register-link').style.display = 'none';
+                document.getElementById('login-link').style.display = 'none';
+                document.getElementById('donor-notifications-link').style.display = 'inline-block';
+                document.getElementById('logout-link').style.display = 'inline-block';
+            } else {
+                // User is not logged in
+                document.getElementById('register-link').style.display = 'inline-block';
+                document.getElementById('login-link').style.display = 'inline-block';
+                document.getElementById('donor-notifications-link').style.display = 'none';
+                document.getElementById('logout-link').style.display = 'none';
+            }
+            
+            // Add logout functionality
+            document.getElementById('logout-link').addEventListener('click', function(e) {
+                e.preventDefault();
+                localStorage.removeItem('user');
+                window.location.href = '/bloodbridge/index.html';
+            });
+        });
+    </script>
+    
+    <script src="js/common.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

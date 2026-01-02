@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - BloodBridge</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .register-container {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        .register-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .register-header img {
+            height: 60px;
+            margin-bottom: 15px;
+        }
+        .register-header h1 {
+            color: #D62828;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #333;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        .btn-register {
+            width: 100%;
+            padding: 12px;
+            background-color: #D62828;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .btn-register:hover {
+            background-color: #B71C1C;
+        }
+        .login-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .login-link a {
+            color: #D62828;
+            text-decoration: none;
+        }
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+        .notification {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #D62828;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            display: none;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 1001;
+        }
+        .notification.error {
+            background-color: #B71C1C;
+        }
+    </style>
+</head>
+<body>
+    <div class="register-container">
+        <div class="register-header">
+            <img src="https://z-cdn-media.chatglm.cn/files/4b1001a3-e1ee-4145-b54f-a95d560e950d_pasted_image_1759676418101.png?auth_key=1791212796-ab6ad212a18e43cb952d122c2f6bc90d-0-902394f1f55b379d8f204ac57729c0db" alt="BloodBridge Logo">
+            <h1>Create an Account</h1>
+            <p>Join BloodBridge and start saving lives</p>
+        </div>
+
+        <form id="register-form">
+            <div class="form-group">
+                <label for="full_name">Full Name</label>
+                <input type="text" id="full_name" name="full_name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm_password">Confirm Password</label>
+                <input type="password" id="confirm_password" name="confirm_password" required>
+            </div>
+            <button type="submit" class="btn-register">Register</button>
+        </form>
+
+        <div class="login-link">
+            <p>Already have an account? <a href="/bloodbridge/login.html">Login</a></p>
+        </div>
+    </div>
+
+    <div id="notification" class="notification">
+        <span id="notification-message"></span>
+        <span class="close-notification">&times;</span>
+    </div>
+
+    <script src="js/common.js"></script>
+    <script src="js/register.js"></script>
+</body>
+</html>
